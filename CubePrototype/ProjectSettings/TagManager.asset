@@ -12,6 +12,7 @@ TagManager:
   - CResources
   - GeneratorC
   - ScoreGenerator1
+  - Resource
   layers:
   - Default
   - TransparentFX
@@ -21,7 +22,7 @@ TagManager:
   - UI
   - Ground
   - Object
-  - 
+  - Resource
   - 
   - 
   - 
