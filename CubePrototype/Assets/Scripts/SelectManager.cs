@@ -30,6 +30,10 @@ public class SelectManager : MonoBehaviour
             {
                 Select(hit.collider.gameObject);
             }
+            if(hit.collider.gameObject.CompareTag("Ground"))
+            {
+                Select(hit.collider.gameObject);
+            }
         }
        } 
        if(Input.GetMouseButtonDown(1))

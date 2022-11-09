@@ -1,0 +1,26 @@
+using System;
+using UnityEngine;
+
+namespace DefaultNamespace
+{
+    [CreateAssetMenu]
+
+    public class FloatVariable : ScriptableObject, IserializationCallbackReceiver
+ {
+        [NonSerialized]
+        public float RuntimeValue;
+        public float InitialValue;
+
+
+        public void OnBeforeSerielize()
+    {
+
+    }
+    public void OnAfterSerialize()
+    {
+        RuntimeValue = InitialValue;
+    }
+ }
+    
+    
+}

@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81197b1e8e77b3c4caf5615dcbecadb4, type: 3}
+  m_Name: ThirdScriptableObject
+  m_EditorClassIdentifier: 
+  id: 3
+  buildingname: WasteReducter
+  description: clean up ur town
+  buildingBody: {fileID: 5157370853082650739, guid: 53b328fe280005046b934668141dff63, type: 3}
+  isChoosen: 1
+  isBuilded: 0
+  Cost: 200
+  Cost2: 200

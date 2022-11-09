@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Testing : MonoBehaviour
 {
+    // those are the splines, we can use them to have some smooth moving npc, i guess for birds can be cool
     public Transform pointA;
     public Transform pointB;
     public Transform pointAB;

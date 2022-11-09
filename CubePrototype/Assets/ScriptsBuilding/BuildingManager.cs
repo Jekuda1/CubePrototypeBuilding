@@ -19,6 +19,8 @@ public class BuildingManager : MonoBehaviour
     bool gridOn;
     public Toggle gridToogle;
     public bool canPlace = true;
+
+    public bool Placed = false;
    // private int pendingObjectCost;
     public BuildingCost price;
     public ResourcesManager Aprice;
@@ -42,6 +44,7 @@ public class BuildingManager : MonoBehaviour
       // if(objects.index == 1)
       
         pendingObject = Instantiate(objects[index], pos, transform.rotation);
+        Placed = false;
        // pendingObject = GetComponent<BuildingCost>().cost;
        // objects[index].GetComponent<BuildingCost>().cost;
         //pendingObject.cost = costs[index];
@@ -54,8 +57,9 @@ public class BuildingManager : MonoBehaviour
     {
         
        // Aprice.currentAResources -= pendingObject.buildingcost.cost;
-       
+        Placed = true;
         pendingObject = null;
+        //Placed = false;
         
       //  Aprice.currentAResources -= price.cost;
     }

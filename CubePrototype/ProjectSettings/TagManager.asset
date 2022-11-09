@@ -13,6 +13,9 @@ TagManager:
   - GeneratorC
   - ScoreGenerator1
   - Resource
+  - BuildingD
+  - FIrstPosition
+  - SecondPosition
   layers:
   - Default
   - TransparentFX

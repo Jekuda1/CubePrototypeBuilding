@@ -1,0 +1,46 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
+using System;
+
+public class MouseInfo : MonoBehaviour
+{
+    public TextMeshProUGUI tipText;
+    public RectTransform tipWindow;
+
+    public static Action<string, Vector2> OnMouseHover;
+    public static Action OnMouseLoseFocus;
+    public Button myButton;
+    public GameObject myPanel;
+
+    public bool ImOn;
+
+   private void OnEnable()
+   {
+     OnMouseHover += ShowTip;
+     OnMouseLoseFocus += HideTip;
+   }
+   private void OnDisable()
+   {
+     OnMouseHover -= ShowTip;
+     OnMouseLoseFocus -= HideTip;
+   }
+   private void ShowTip(string tip, Vector2 mousePos)
+   {
+     tipText.text = tip;
+     tipWindow.sizeDelta = new Vector2(tipText.preferredWidth > 200 ? 200 : tipText.preferredWidth, tipText.preferredHeight);
+     tipWindow.gameObject.SetActive(true);
+     tipWindow.transform.position = new Vector2(mousePos.x + tipWindow.sizeDelta.x * 2, mousePos.y);
+   }
+   private void HideTip()
+   {
+     tipText.text = default;
+     tipWindow.gameObject.SetActive(false);
+   }
+   public void Start()
+   {
+     HideTip();
+   }
+}
